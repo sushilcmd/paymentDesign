@@ -1,0 +1,198 @@
+body {
+  padding: 0rem;
+  margin: 0rem;
+}
+.mainContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-family: 'montserrat';
+}
+.mainContainer .header {
+  position: absolute;
+  height: 10rem;
+  width: 100%;
+}
+.mainContainer .formContainer {
+  position: absolute;
+  top: 10rem;
+  bottom: 10rem;
+  width: 100%;
+  overflow: auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  box-sizing: border-box;
+}
+.mainContainer .formContainer .textBox {
+  position: relative;
+  float: left;
+  height: 5rem;
+  width: 100%;
+  margin-top: 2rem;
+  border-bottom: 1px solid #00bff2;
+  box-sizing: border-box;
+}
+.mainContainer .formContainer .textBox .inputText {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 5rem;
+  text-align: left;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-style: none;
+  text-transform: capitalize;
+}
+.mainContainer .formContainer .textBox .inputText.addPadding {
+  padding-top: 1rem;
+}
+.mainContainer .formContainer .textBox input[type="text"]::-webkit-input-placeholder {
+  color: lightslategray;
+}
+.mainContainer .formContainer .textBox .selectBank {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+.mainContainer .formContainer .textBox .selectBank .text {
+  position: absolute;
+  height: 100%;
+  left: 0rem;
+  right: 10rem;
+  line-height: 4rem;
+  font-size: 1.6rem;
+  color: lightslategray;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mainContainer .formContainer .textBox .selectBank .icon {
+  position: absolute;
+  height: 100%;
+  width: 10rem;
+  right: 0rem;
+}
+.mainContainer .formContainer .textBox .selectBank .icon .image {
+  position: absolute;
+  height: 2.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+.mainContainer .formContainer .textBox .banksContainer {
+  position: relative;
+  float: left;
+  height: auto;
+  max-height: 30rem;
+  overflow: auto;
+  width: 100%;
+  z-index: 100;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  box-sizing: border-box;
+  background: #fff;
+  display: none;
+}
+.mainContainer .formContainer .textBox .banksContainer .bank {
+  position: relative;
+  float: left;
+  height: 5rem;
+  width: 100%;
+  line-height: 5rem;
+  text-align-last: left;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  border-bottom: 1px solid lightgray;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  overflow: hidden;
+  padding-right: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mainContainer .footer {
+  position: absolute;
+  bottom: 0rem;
+  height: 10rem;
+  width: 100%;
+}
+.mainContainer .footer .btn {
+  position: absolute;
+  height: 5rem;
+  width: 25rem;
+  text-align: center;
+  line-height: 5rem;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #00bff2;
+  text-transform: capitalize;
+  border-radius: 3rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+}
+.mainContainer .overlay {
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  width: 100%;
+  background: rgba(0, 191, 242, 0.04);
+  z-index: 100;
+  display: none;
+}
+.mainContainer .overlay .succesfullMessage {
+  position: absolute;
+  height: 25rem;
+  bottom: 0rem;
+  width: 100%;
+  background: #2ecc71;
+}
+.mainContainer .overlay .succesfullMessage .closeBtn {
+  position: absolute;
+  height: 5rem;
+  right: 0rem;
+  width: 5rem;
+  z-index: 100;
+  background: #2ecc71;
+}
+.mainContainer .overlay .succesfullMessage .closeBtn .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2rem;
+}
+.mainContainer .overlay .succesfullMessage .gearIcon {
+  position: absolute;
+  height: 8rem;
+  width: 8rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainContainer .overlay .succesfullMessage .gearIcon .icon {
+  position: absolute;
+  height: 8rem;
+}
+.mainContainer .overlay .succesfullMessage .text {
+  position: absolute;
+  bottom: 0rem;
+  height: 7rem;
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+}

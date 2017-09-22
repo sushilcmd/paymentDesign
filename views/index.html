@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width = device-width, initial-scale = 0, user-scalable = no, minimum-scale = 1, maximum-scale = 1">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link href="../fonts/font.css" rel="stylesheet" type="text/css">
+    <link href="../css/screen.css" rel="stylesheet" type="text/css">
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+
+    <body>
+        <div class="mainContainer">
+            <div class="header"></div>
+            <div class="formContainer">
+                <div class="textBox">
+                    <input type="text" class="inputText" placeholder="mobile number">
+                </div>
+                <div class="textBox">
+                    <div class="selectBank">select beneficiary name</div>
+                    <div class="banksContainer">
+                        <div class="bank">bank 1</div>
+                        <div class="bank">bank 1</div>
+                        <div class="bank">bank 1</div>
+                        <div class="bank">bank 1</div>
+                        <div class="bank">bank 1</div>
+                    </div>
+                </div>
+                <div class="textBox">
+                    <input type="text" class="inputText" placeholder="account number">
+                </div>
+                <div class="textBox">
+                    <input type="text" class="inputText" placeholder="amount">
+                </div>
+            </div>
+            <div class="footer">
+                <div class="btn send">send money</div>
+            </div>
+            <div class="overlay">
+                <div class="succesfullMessage">
+                    <div class="closeBtn">
+                        <img src="../images/cross.png" class="icon">
+                    </div>
+                    <div class="gearIcon">
+                        <img src="../images/gear.png" class="icon">
+                    </div>
+                    <div class="text">transaction sucessfull</div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/x-jquery-tmpl" id="paymentTemplate">
+        {{each(i,v) details}} {{if isDropDown}}
+        <div class="textBox" data-index="{{html i}}">
+            <div class="selectBank">
+                <div class="text"> {{html display}}</div>
+                <div class="icon">
+                    <img src="../images/down.png" class="image">
+                </div>
+            </div>
+            <div class="banksContainer">
+                {{each(i,v) dropDownMeta}}
+                <div class="bank" data-index="{{html i}}">{{html display}}</div>
+                {{/each}}
+            </div>
+        </div>
+        {{else}}
+        <div class="textBox" data-index="{{html i}}">
+            <input type="text" class="inputText addPadding {{html id}}" placeholder="{{html display}}">
+        </div>
+        {{/if}} {{/each}}
+    </script>
+
+    <script src="../scripts/jquery-3.js"></script>
+    <script src="../scripts/jquery.tmpl.min.js"></script>
+    <script src="../scripts/jquery.cookie.js"></script>
+    <script src="../scripts/moment.min.js"></script>
+    <script src="../js/appConfig.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/index.js"></script>
+
+</html>
